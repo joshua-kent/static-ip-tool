@@ -1,0 +1,11 @@
+[Unit]
+Description=Sets up static IP address
+After=network.target
+Before=named.service httpd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash /usr/bin/ipsetup
+
+[Install]
+WantedBy=multi-user.target

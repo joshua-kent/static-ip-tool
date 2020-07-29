@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ `whoami` != 'root' ]]
+then
+    sudo /usr/bin/ipsetup-edit
+    exit 0
+fi
+
+vim /usr/bin/ipsetup
