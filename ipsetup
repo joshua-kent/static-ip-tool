@@ -6,6 +6,7 @@ then
     exit 1
 fi
 
+rfkill unblock wifi
 ip link set wlan0 up
 ip address flush dev wlan0
 ip address add 192.168.1.33/16 brd + dev wlan0
